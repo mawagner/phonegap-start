@@ -47,3 +47,7 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+
+      document.addEventListener("resume",function(){
+        navigator.notification.alert("piip", function(){});
+      },false);
