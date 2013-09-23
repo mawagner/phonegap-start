@@ -34,6 +34,9 @@ var app = {
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        document.addEventListener("resume",function(){
+          navigator.notification.alert("piip", function(){});
+        },false);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -47,7 +50,3 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-      document.addEventListener("resume",function(){
-        navigator.notification.alert("piip", function(){});
-      },false);
